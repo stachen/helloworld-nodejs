@@ -9,6 +9,7 @@ phases:
       - REPOSITORY_URI=601283025890.dkr.ecr.us-east-1.amazonaws.com/hello-world
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - echo ImageTag $IMAGE_TAG
+      - echo CODEBUILD $CODEBUILD_RESOLVED_SOURCE_VERSION
   build:
     commands:
       - echo Build started on `date`
