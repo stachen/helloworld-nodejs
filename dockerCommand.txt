@@ -1,0 +1,15 @@
+docker build -t hwapp .
+
+docker run -p 49160:8080 -d hwapp
+
+#aws create ECR repo
+aws ecr create-repository --repository-name hello-world
+{
+    "repository": {
+        "registryId": "601283025890",
+        "repositoryName": "hello-world",
+        "repositoryArn": "arn:aws:ecr:us-east-1:601283025890:repository/hello-world",
+        "createdAt": 1518121961.0,
+        "repositoryUri": "601283025890.dkr.ecr.us-east-1.amazonaws.com/hello-world"
+    }
+}
